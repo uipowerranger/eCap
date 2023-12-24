@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { first } from 'rxjs/operators';
+import { SelectItem } from 'primeng/api';
 
 import { MessageService } from 'primeng/api';
 import { AlertService } from 'src/app/services';
@@ -14,6 +14,10 @@ import { Product } from '../models/products';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent {
+  layout: string = 'list';
+
+  products!: Product[];
+
   form!: FormGroup;
   loading = false;
   submitted = false;
@@ -21,7 +25,12 @@ export class ProductsComponent {
   indeterminate = false;
   labelPosition: 'before' | 'after' = 'after';
   disabled = false;
-  products: Product[];
+  sortOptions!: SelectItem[];
+  sortOrder!: number;
+
+  sortField!: string;
+  sortKey: any;
+
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -40,13 +49,27 @@ export class ProductsComponent {
       password: ['', Validators.required],
       remmeerme: [false],
     });
+    this.sortOptions = [
+      { label: 'Price High to Low', value: '!price' },
+      { label: 'Price Low to High', value: 'price' },
+    ];
   }
 
   // convenience getter for easy access to form fields
   get f() {
     return this.form.controls;
   }
+  onSortChange(event: any) {
+    let value = event.value;
 
+    if (value.indexOf('!') === 0) {
+      this.sortOrder = -1;
+      this.sortField = value.substring(1, value.length);
+    } else {
+      this.sortOrder = 1;
+      this.sortField = value;
+    }
+  }
   onSubmit() {
     this.submitted = true;
 
@@ -66,6 +89,7 @@ export class ProductsComponent {
     });
   }
   getSeverity(product: any) {
+    console.log('product', product);
     switch (product) {
       case 'INSTOCK':
         return 'success';
@@ -77,7 +101,7 @@ export class ProductsComponent {
         return 'danger';
 
       default:
-        return null;
+        return '';
     }
   }
 }

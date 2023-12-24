@@ -1,7 +1,7 @@
 import { Injectable, ɵsetUnknownPropertyStrictMode } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { User } from '../models';
@@ -13,6 +13,8 @@ export class ProductService {
   private userSubject: BehaviorSubject<User | null>;
   public user: Observable<User | null>;
 
+  private product$ = new BehaviorSubject<any>({});
+  selectedProduct$ = this.product$.asObservable();
   constructor(private router: Router, private http: HttpClient) {
     this.userSubject = new BehaviorSubject(
       JSON.parse(localStorage.getItem('user')!)
@@ -59,5 +61,9 @@ export class ProductService {
         return x;
       })
     );
+  }
+
+  setProduct(product: any) {
+    this.product$.next(product);
   }
 }

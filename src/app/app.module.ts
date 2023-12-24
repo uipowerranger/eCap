@@ -13,6 +13,7 @@ import { ChartModule } from 'primeng/chart';
 import { TooltipModule } from 'primeng/tooltip';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { DropdownModule } from 'primeng/dropdown';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
@@ -30,7 +31,8 @@ import { MessageService } from 'primeng/api';
 import { RippleModule } from 'primeng/ripple';
 import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
 import { LoginComponent } from './components/login/login.component';
-
+import { HeaderComponent } from './components/header/header.component';
+import { CartListComponent } from './products/cart-list/cart-list.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { LoginComponent } from './components/login/login.component';
     TwsListComponent,
     TwsTableComponent,
     LoginComponent,
-    
+    HeaderComponent,
+    CartListComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +65,7 @@ import { LoginComponent } from './components/login/login.component';
     AutoCompleteModule,
     BrowserAnimationsModule,
     DropdownModule,
+    OverlayPanelModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

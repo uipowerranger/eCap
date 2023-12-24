@@ -1,28 +1,5 @@
 <!-- nav -->
-
-<nav class="navbar navbar-expand fixed-top tws-header tws-nav">
-  <div class="navbar-nav tws-nav-inner">
-    <a
-      class="nav-item nav-link"
-      routerLink="/"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      <img src="../assets/images/e-com-logo.png" style="height: 56px" />
-    </a>
-    <div class="header-right" *ngIf="user">
-      <h5>Hi {{ user?.firstName }} {{ user?.lastName }}!</h5>
-      <button
-        class="btn btn-link nav-item nav-link"
-        (click)="logout()"
-        pTooltip="Sign out"
-      >
-        <i class="pi pi-power-off"></i>
-      </button>
-    </div>
-  </div>
-</nav>
-
+<app-header></app-header>
 <div class="app-container">
   <p-toast></p-toast>
   <alert></alert>
