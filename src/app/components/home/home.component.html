@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-between">
+  <div class="flex-item-10 menu">
+    <main>
+      <app-tws-list></app-tws-list>
+    </main>
+    <article class="version">Version 1.0.0</article>
+  </div>
+  <div class="flex-item-90 p-2">
+    <div class="d-flex flex-column">
+      <app-tws-table></app-tws-table>
+      <div class="container-fuid">
+        <div class="row justify-content-md-center">
+          <div class="tws-card col col-lg-3">
+            <div class="tws-card-title">Tasks Status</div>
+            <div class="tws-card-body">
+              <app-chartsdemo></app-chartsdemo>
+            </div>
+          </div>
+          <div class="tws-card col col-lg-3">
+            <div class="tws-card-title">TWS Users</div>
+            <div class="tws-card-body bg-white">
+              <p-chart
+                type="doughnut"
+                [data]="data"
+                [options]="options"
+                width="350"
+                height="350"
+              ></p-chart>
+            </div>
+          </div>
+          <div class="tws-card col col-lg-4">
+            <app-sutinfo></app-sutinfo>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

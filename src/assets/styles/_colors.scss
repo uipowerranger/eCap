@@ -1,0 +1,46 @@
+$primary-bgcolor: linear-gradient(
+  to right top,
+  #4c5253,
+  #46545b,
+  #485464,
+  #52526a,
+  #644d69
+);
+$comp-header-bgcolor: l
+  linear-gradient(to right top, #4c5253, #46545b, #485464, #52526a, #644d69);
+$primary-textcolor: darkblue;
+$primary-fontsize: 18px;
+$primary-btn-bg: #1d3a41;
+@mixin button-bg($bg) {
+  background-color: $bg;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  outline: none;
+  border: 0;
+  &:hover {
+    background-color: darken($bg, 8%) !important;
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background-color: darken($bg, 25%) !important;
+  }
+  &:disabled {
+    // background-color: darken($bg, 2%) !important;
+    background-color: #668f99;
+    &:hover {
+      background-color: #668f99 !important;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.tws-primary {
+  @include button-bg($primary-btn-bg);
+}
+
+.tws-primary {
+  .p-fileupload-choose {
+    @include button-bg($primary-btn-bg);
+  }
+}

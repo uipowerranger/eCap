@@ -1,0 +1,18 @@
+@mixin button-bg($bg) {
+  background-color: $bg;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  outline: none;
+  border: 0;
+  &:hover {
+    background-color: darken($bg, 8%) !important;
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background-color: darken($bg, 25%) !important;
+  }
+  &:disabled {
+    background-color: darken($bg, 2%) !important;
+  }
+}

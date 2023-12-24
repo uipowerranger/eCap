@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
+@import "./assets/styles/colors";
+@import "primeicons/primeicons.css";
+@import url(assets/styles/_header.scss);
+@import url(assets/styles/_login.scss);
+@import url(assets/styles/_theme.scss);
+@import url(assets/styles/_navigation.scss);
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: $primary-bgcolor;
+  color: #fff !important;
+  font-size: $primary-fontsize;
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.tws-card-title {
+  background: $primary-bgcolor;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #06bf95;
+}
+.p-dialog {
+  width: 99% !important;
+  height: 99vh !important;
+}
+.p-dialog-draggable .p-dialog-header {
+  // background: linear-gradient(45deg, #1e84b1 0%, #06bf95 100%) !important;
+  background-image: linear-gradient(
+    to right top,
+    #4c5253,
+    #46545b,
+    #485464,
+    #52526a,
+    #644d69
+  ) !important;
+  color: #fff !important;
+  padding: 10px 20px !important;
+}
+.p-selectbutton .p-button {
+  border: 0 !important;
+}
+.p-button:focus {
+  box-shadow: none !important;
+}
+.p-selectbutton .p-button.p-highlight {
+  background: l
+    linear-gradient(to right top, #4c5253, #46545b, #485464, #52526a, #644d69) !important;
+  border: 0 !important;
+}
+.p-dropdown {
+  width: 55% !important;
+}
+.create-task-inputs-wrapper .p-card .p-card-body {
+  padding: 0 20px;
+}
+button {
+  &.p-disabled {
+    pointer-events: none;
+  }
+}

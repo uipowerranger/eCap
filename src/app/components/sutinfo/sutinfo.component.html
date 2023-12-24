@@ -1,0 +1,33 @@
+<div class="tws-card">
+  <div class="tws-card-title">
+    Sut Info
+    <!-- <i
+              class="pi pi-plus"
+              style="font-size: 1.5rem"
+              pTooltip="Add New Task"
+            ></i> -->
+  </div>
+  <div class="tws-card-body bg-white">
+    <div class="mx-h-300">
+      <p-table [value]="products">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Name</th>
+            <th>Availability</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td>{{ product.name }}</td>
+            <td>
+              <p-badge
+                [value]="product.availability"
+                [severity]="getSeverioty(product.availability)"
+              ></p-badge>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
