@@ -13,7 +13,7 @@ export class ProductService {
   private userSubject: BehaviorSubject<User | null>;
   public user: Observable<User | null>;
 
-  private product$ = new BehaviorSubject<any>({});
+  private product$ = new Subject<Product>();
   selectedProduct$ = this.product$.asObservable();
   constructor(private router: Router, private http: HttpClient) {
     this.userSubject = new BehaviorSubject(

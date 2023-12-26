@@ -1,12 +1,26 @@
-p {
-  color: white;
+.cust-width {
+  width: 100%;
+  text-wrap: nowrap;
+  display: flex;
+  justify-content: space-evenly;
 }
-.overlay-cart {
-  width: 450px;
-  margin-top: 110px !important;
-  z-index: 2;
+.serach-block {
+  position: relative;
+  // background-color: #fff;
 }
-.product-image {
-  width: 100px;
-  height: 100px;
+.serach-block input {
+  border-radius: 200px;
+  padding-left: 50px;
+  background-color: #4f4c4d;
+  border: 0;
+  min-width: 400px;
+}
+::placeholder {
+  color: #999994;
+}
+.serach-block .search-icon {
+  position: absolute;
+  top: 7px;
+  left: 20px;
+  color: #fff;
 }

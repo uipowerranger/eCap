@@ -11,11 +11,12 @@ import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import { ProductComponent } from './product/product.component';
 import { BadgeModule } from 'primeng/badge';
+import { EhomeComponent } from './ehome/ehome.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
-  declarations: [ProductsComponent, ProductComponent],
+  declarations: [ProductsComponent, ProductComponent, EhomeComponent],
   imports: [
     CommonModule,
     ProductsRoutingModule,

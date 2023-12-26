@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { User } from 'src/app/models';
 import { AccountService } from 'src/app/services';
 
-@Component({ templateUrl: 'home.component.html' })
+@Component({
+  templateUrl: 'home.component.html',
+  styleUrls: ['./home.component.scss'],
+})
 export class HomeComponent {
   user: User | null;
 

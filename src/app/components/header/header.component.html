@@ -1,78 +1,90 @@
-<nav class="navbar navbar-expand fixed-top tws-header tws-nav">
-  <div class="navbar-nav tws-nav-inner">
-    <a
-      class="nav-item nav-link"
-      routerLink="/"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <app-brand></app-brand>
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="isMenuCollapsed = !isMenuCollapsed"
     >
-      <img src="../assets/images/e-com-logo.png" style="height: 56px" />
-    </a>
-    <div
-      class="header-right d-flex justify-content-between"
-      *ngIf="user"
-      style="width: 400px"
-    >
-      <i
-        class="pi pi-shopping-cart text-3xl"
-        pBadge
-        value="{{ selectedProduct.length }}"
-        (click)="op.toggle($event)"
-      ></i>
-      <h5>Hi {{ user?.firstName }} {{ user?.lastName }}!</h5>
-      <button
-        class="btn btn-link nav-item nav-link"
-        (click)="logout()"
-        pTooltip="Sign out"
-      >
-        <i class="pi pi-power-off"></i>
-      </button>
+      &#9776;
+    </button>
+
+    <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+      <ul class="navbar-nav w-25">
+        <li></li>
+      </ul>
+      <form class="d-flex justify-content-between serach-block">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search friends, photos"
+          aria-label="Search"
+        /><i class="bi bi-search search-icon"></i>
+      </form>
+      <ul class="navbar-nav cust-width">
+        <li class="nav-item active">
+          <!-- Step 4: Close the menu when a link is clicked. -->
+          <a
+            class="nav-link"
+            [routerLink]="'.'"
+            (click)="isMenuCollapsed = true"
+            >Home</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <div ngbDropdown class="d-inline-block">
+            <a
+              class="nav-link"
+              [routerLink]="'.'"
+              (click)="isMenuCollapsed = true"
+              ngbDropdownToggle
+              ><span class="text-nowrap"> News Feed</span></a
+            >
+
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem>Action - 1</button>
+              <button ngbDropdownItem>Another Action</button>
+              <button ngbDropdownItem>Something else is here</button>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div ngbDropdown class="d-inline-block">
+            <a
+              class="nav-link"
+              [routerLink]="'.'"
+              (click)="isMenuCollapsed = true"
+              ngbDropdownToggle
+              >Timeline</a
+            >
+
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem>Action - 1</button>
+              <button ngbDropdownItem>Another Action</button>
+              <button ngbDropdownItem>Something else is here</button>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="'.'"
+            (click)="isMenuCollapsed = true"
+            >Login In</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="'.'"
+            (click)="isMenuCollapsed = true"
+            >Contact</a
+          >
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
-<p-overlayPanel #op [showCloseIcon]="true" class="overlay-cart">
-  <ng-template pTemplate>
-    <p-table
-      [value]="selectedProduct"
-      selectionMode="single"
-      [paginator]="true"
-      [rows]="5"
-      responsiveLayout="scroll"
-    >
-      <ng-template pTemplate="header">
-        <tr>
-          <th pSortableColumn="name">
-            Name<p-sortIcon field="name"></p-sortIcon>
-          </th>
-          <th>Image</th>
-          <th pSortableColumn="price">
-            Price <p-sortIcon field="price"></p-sortIcon>
-          </th>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-rowData let-product>
-        <tr [pSelectableRow]="rowData">
-          <td>{{ product.title }}</td>
-          <td>
-            <img
-              src="{{ product.thumbnail }}"
-              [alt]="product.image"
-              class="product-image"
-            />
-          </td>
-          <td>{{ product.price }}</td>
-          <td>
-            <button
-              pButton
-              type="button"
-              label="Click"
-              (click)="deleteItem($event)"
-            ></button>
-            <!-- <p-button label="Click" (onClick)="deleteItem($event)"></p-button> -->
-          </td>
-        </tr>
-      </ng-template>
-    </p-table>
-  </ng-template>
-</p-overlayPanel>
-<app-cart-list *ngIf="displayCartBox"></app-cart-list>

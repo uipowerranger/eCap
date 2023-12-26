@@ -10,18 +10,9 @@ const accountModule = () =>
   import('./account/account.module').then((x) => x.AccountModule);
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-
-  {
-    path: 'products',
-    loadChildren: () =>
-      import('./products/products.module').then((m) => m.ProductsModule),
-    canActivate: [AuthGuard],
-  },
-
-  // otherwise redirect to home
-  { path: '**', redirectTo: 'products' },
 ];
 
 @NgModule({

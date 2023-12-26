@@ -1,11 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
+
 @import "./assets/styles/colors";
 @import "primeicons/primeicons.css";
 @import url(assets/styles/_header.scss);
 @import url(assets/styles/_login.scss);
 @import url(assets/styles/_theme.scss);
 @import url(assets/styles/_navigation.scss);
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
 html,
 body {
   height: 100%;
@@ -13,7 +16,6 @@ body {
   padding: 0;
   margin: 0;
   background: $primary-bgcolor;
-  color: #fff !important;
   font-size: $primary-fontsize;
   font-family: "Open Sans", sans-serif !important;
 }
@@ -34,17 +36,6 @@ body {
   height: 99vh !important;
 }
 .p-dialog-draggable .p-dialog-header {
-  // background: linear-gradient(45deg, #1e84b1 0%, #06bf95 100%) !important;
-  background-image: linear-gradient(
-    to right top,
-    #4c5253,
-    #46545b,
-    #485464,
-    #52526a,
-    #644d69
-  ) !important;
-  color: #fff !important;
-  padding: 10px 20px !important;
 }
 .p-selectbutton .p-button {
   border: 0 !important;
@@ -53,9 +44,6 @@ body {
   box-shadow: none !important;
 }
 .p-selectbutton .p-button.p-highlight {
-  background: l
-    linear-gradient(to right top, #4c5253, #46545b, #485464, #52526a, #644d69) !important;
-  border: 0 !important;
 }
 .p-dropdown {
   width: 55% !important;
@@ -68,3 +56,10 @@ button {
     pointer-events: none;
   }
 }
+
+.p-overlaypanel {
+  z-index: 9999 !important;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";

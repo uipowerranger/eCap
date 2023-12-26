@@ -18,10 +18,6 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
 import { AlertComponent } from './components/alert/alert.component';
-import { SutinfoComponent } from './components/sutinfo/sutinfo.component';
-import { ChartsdemoComponent } from './components/chartsdemo/chartsdemo.component';
-import { TwsListComponent } from './components/tws-list/tws-list.component';
-import { TwsTableComponent } from './components/tws-table/tws-table.component';
 import {
   ErrorInterceptor,
   JwtInterceptor,
@@ -33,19 +29,30 @@ import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CartListComponent } from './products/cart-list/cart-list.component';
-
+import { ButtonModule } from 'primeng/button';
+import { MenubarModule } from 'primeng/menubar';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { PosterComponent } from './components/poster/poster.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SigninComponent } from './components/signin/signin.component';
+import { BrandComponent } from './components/brand/brand.component';
+import { SocialHerdComponent } from './components/social-herd/social-herd.component';
+import { SocialIconsComponent } from './components/social-icons/social-icons.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AlertComponent,
-    SutinfoComponent,
-    ChartsdemoComponent,
-    TwsListComponent,
-    TwsTableComponent,
     LoginComponent,
     HeaderComponent,
     CartListComponent,
+    PosterComponent,
+    FooterComponent,
+    SigninComponent,
+    BrandComponent,
+    SocialHerdComponent,
+    SocialIconsComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +72,11 @@ import { CartListComponent } from './products/cart-list/cart-list.component';
     AutoCompleteModule,
     BrowserAnimationsModule,
     DropdownModule,
+    ButtonModule,
     OverlayPanelModule,
+    MenubarModule,
+    NgbModule,
+    NgbCollapseModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
