@@ -1,0 +1,64 @@
+{
+  "friendscard": [
+    {
+      "id": 1,
+      "title": "Vinod",
+      "designation": "Friend",
+      "relation": "Friend"
+    },
+    {
+      "id": 2,
+      "title": "Arun",
+      "designation": "Student at Harward",
+      "relation": "Student"
+    },
+    {
+      "id": 3,
+      "title": "Sandhya",
+      "designation": "Gambling star",
+      "relation": "Gambling"
+    },
+    {
+      "id": 4,
+      "title": "Janu",
+      "designation": "Chess mate",
+      "relation": "Chess mate"
+    },
+    {
+      "id": 5,
+      "title": "Govind",
+      "designation": "Professor",
+      "relation": "Study"
+    },
+    {
+      "id": 6,
+      "title": "Praveen",
+      "designation": "Lawyer",
+      "relation": "Court"
+    },
+    {
+      "id": 7,
+      "title": "Manoj",
+      "designation": "VC",
+      "relation": "Chance"
+    },
+    {
+      "id": 8,
+      "title": "Vani",
+      "designation": "Developer",
+      "relation": "Development"
+    },
+    {
+      "id": 9,
+      "title": "Chandra",
+      "designation": "Court Employee",
+      "relation": "Court"
+    },
+    {
+      "id": 10,
+      "title": "Chanakya",
+      "designation": "Home Maker",
+      "relation": "Home"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<div class="container mt-5 cust-container">
+  <div class="row grid-divider">
+    <div class="col-sm-4">
+      <div class="col-padding">
+        <app-loggedprofile [friend]="friends[0]"></app-loggedprofile>
+      </div>
+      <div class="col-padding">
+        <app-menu></app-menu>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="col-padding">
+        <div class="row mb-5">
+          <div class="col-12">
+            <div
+              class="d-flex flex-sm-row flex-column justify-content-between align-items-md-center"
+            >
+              <app-usericoncircle></app-usericoncircle>
+              <form action="">
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                  placeholder="Write what you wish *"
+                ></textarea>
+              </form>
+              <div class="d-flex justify-content-between w-25">
+                <i class="bi bi-images"></i>
+                <i class="bi bi-pencil-square"></i>
+                <i class="bi bi-map"></i>
+              </div>
+              <button class="btn btn-primary">Publish</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6" *ngFor="let friend of friends">
+            <app-friendcard [friend]="friend"></app-friendcard>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="col-padding" *ngFor="let friend of friends">
+        <app-followfriend [friend]="friend"></app-followfriend>
+      </div>
+    </div>
+  </div>
+</div>

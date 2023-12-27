@@ -41,6 +41,12 @@ import { SocialHerdComponent } from './components/social-herd/social-herd.compon
 import { SocialIconsComponent } from './components/social-icons/social-icons.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { ContactusFormComponent } from './components/contactus-form/contactus-form.component';
+import { CheckmyfriendComponent } from './components/checkmyfriend/checkmyfriend.component';
+import { FollowfriendComponent } from './components/followfriend/followfriend.component';
+import { FriendCard } from './components/friendcard/friendcard.component';
+import { LoggedprofileComponent } from './components/loggedprofile/loggedprofile.component';
+import { UsericoncircleComponent } from './components/usericoncircle/usericoncircle.component';
+import { MenuComponent } from './components/menu/menu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +63,12 @@ import { ContactusFormComponent } from './components/contactus-form/contactus-fo
     SocialIconsComponent,
     ContactusComponent,
     ContactusFormComponent,
+    FriendCard,
+    CheckmyfriendComponent,
+    FollowfriendComponent,
+    LoggedprofileComponent,
+    UsericoncircleComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

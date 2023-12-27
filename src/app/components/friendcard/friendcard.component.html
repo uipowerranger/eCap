@@ -1,0 +1,29 @@
+<div class="frnd-div">
+  <a class="frnd-bg frnd-block"></a>
+
+  <div>
+    <a title="{{ friend.title }}" href="" class="frnd-avatarLink">
+      <img
+        alt="{{ friend.title }}"
+        src="../../../assets/images/male-avatar.webp"
+        class="frnd-avatarImg"
+      />
+    </a>
+
+    <div class="frnd-divStats">
+      <ul class="frnd-Arrange">
+        <li class="frnd-ArrangeSizeFit">
+          <div class="frnd-divName">
+            <a href="">{{ friend.title }}</a>
+          </div>
+          <span class="frnd-StatValue">{{ friend.designation }} </span>
+        </li>
+        <li class="frnd-ArrangeSizeFit">
+          <span href="" title="">
+            <span class="frnd-StatLabel frnd-block">{{ friend.relation }}</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.card-profile {
+  position: relative;
+  background-image: url("https://pbs.twimg.com/profile_banners/50988711/1384539792/600x200");
+  background-position: 0 50%;
+  background-size: 100% auto;
+  color: #fff;
+  //   border-radius: 4px 4px 0 0;
+}
+
+.card-profile .card-avatar {
+  width: 85px;
+  max-width: 85px;
+  height: 85px;
+  margin: -37px 10px 0px;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+    0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card-profile .card-avatar img {
+  width: 100%;
+}
+.custom-body {
+  margin: -40px 93px 0px;
+  font-size: 12px;
+}
+.card-category {
+  font-size: 12px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.77) and (orientation: landscape) {
+  // or (orientation: portrait) {
+  .custom-body {
+    width: 100%;
+    margin: 0px;
+  }
+}
