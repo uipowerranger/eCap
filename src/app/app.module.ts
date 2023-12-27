@@ -39,6 +39,8 @@ import { SigninComponent } from './components/signin/signin.component';
 import { BrandComponent } from './components/brand/brand.component';
 import { SocialHerdComponent } from './components/social-herd/social-herd.component';
 import { SocialIconsComponent } from './components/social-icons/social-icons.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
+import { ContactusFormComponent } from './components/contactus-form/contactus-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +55,8 @@ import { SocialIconsComponent } from './components/social-icons/social-icons.com
     BrandComponent,
     SocialHerdComponent,
     SocialIconsComponent,
+    ContactusComponent,
+    ContactusFormComponent,
   ],
   imports: [
     BrowserModule,

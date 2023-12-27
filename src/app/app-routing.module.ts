@@ -5,6 +5,7 @@ import { AuthGuard } from './helpers';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './account/login.component';
 import { RegisterComponent } from './account/register.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
 
 const accountModule = () =>
   import('./account/account.module').then((x) => x.AccountModule);
@@ -12,6 +13,7 @@ const accountModule = () =>
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'contact', component: ContactusComponent },
   { path: 'register', component: RegisterComponent },
 ];
 
