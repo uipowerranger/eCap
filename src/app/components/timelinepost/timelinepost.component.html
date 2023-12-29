@@ -1,0 +1,148 @@
+<div class="container">
+  <!-- {{ posts | json }} -->
+  <ul class="timeline">
+    <li *ngFor="let post of posts">
+      <!-- begin timeline-time -->
+      <div class="timeline-time">
+        <span class="date">{{ post.day }}</span>
+        <span class="time">{{ post.time }}</span>
+      </div>
+      <!-- end timeline-time -->
+      <!-- begin timeline-icon -->
+      <div class="timeline-icon">
+        <a href="javascript:;">&nbsp;</a>
+      </div>
+      <!-- end timeline-icon -->
+      <!-- begin timeline-body -->
+      <div class="timeline-body">
+        <div class="timeline-header">
+          <span class="userimage"
+            ><img src="../../../assets/images/female-avathar.png" alt=""
+          /></span>
+          <span class="username"
+            ><a href="javascript:;">{{ post.username }}</a> <small></small
+          ></span>
+          <span class="pull-right text-muted">&nbsp;&nbsp;Follow</span>
+          <p>
+            <small class="text-muted posted-on">Today</small>
+          </p>
+        </div>
+        <div class="timeline-content">
+          <p class="m-t-20">
+            <img
+              src="https://bootdey.com/img/Content/avatar/avatar7.png"
+              alt=""
+            />
+          </p>
+          <small>
+            {{ post.comment }}
+          </small>
+        </div>
+        <div class="timeline-likes">
+          <div class="stats-right">
+            <span class="stats-text"
+              ><i class="bi bi-hand-thumbs-up"></i>{{ post.likes }}
+            </span>
+            <span class="stats-text"
+              ><i class="bi bi-hand-thumbs-down"></i>{{ post.dislikes }}
+            </span>
+          </div>
+          <div class="stats">
+            <span class="fa-stack fa-fw stats-icon">
+              <i class="fa fa-circle fa-stack-2x text-danger"></i>
+              <i class="fa fa-heart fa-stack-1x fa-inverse t-plus-1"></i>
+            </span>
+            <span class="fa-stack fa-fw stats-icon">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
+            </span>
+            <span class="stats-total">&nbsp;</span>
+          </div>
+        </div>
+
+        <div class="timeline-comment-box">
+          <div class="card card-inner">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-2">
+                  <img
+                    src="https://image.ibb.co/jw55Ex/def_face.jpg"
+                    class="img img-rounded img-fluid"
+                  />
+                </div>
+                <div class="col-md-10">
+                  <p>
+                    <a
+                      href="https://maniruzzaman-akash.blogspot.com/p/contact.html"
+                      ><strong>Maniruzzaman Akash</strong></a
+                    >
+                  </p>
+                  <small>
+                    Lorem Ipsum is simply dummy text of the pr make but also the
+                    leap into electronic typesetting, remaining essentially
+                    unchanged. It was popularised in the 1960s with the release
+                    of Letraset sheets containing Lorem Ipsum passages, and more
+                    recently with desktop publishing software like Aldus
+                    PageMaker including versions of Lorem Ipsum.
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-inner">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-2">
+                  <img
+                    src="https://image.ibb.co/jw55Ex/def_face.jpg"
+                    class="img img-rounded img-fluid"
+                  />
+                  <p class="text-secondary text-center">15 Minutes Ago</p>
+                </div>
+                <div class="col-md-10">
+                  <p>
+                    <a
+                      href="https://maniruzzaman-akash.blogspot.com/p/contact.html"
+                      ><strong>Maniruzzaman Akash</strong></a
+                    >
+                  </p>
+                  <small>
+                    Lorem Ipsum is simply dummy text of the pr make but also the
+                    leap into electronic typesetting, remaining essentially
+                    unchanged. It was popularised in the 1960s with the release
+                    of Letraset sheets containing Lorem Ipsum passages, and more
+                    recently with desktop publishing software like Aldus
+                    PageMaker including versions of Lorem Ipsum.
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="user">
+            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" />
+          </div>
+          <div class="input">
+            <form action="">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control rounded-corner"
+                  placeholder="Write a comment..."
+                />
+                <span class="input-group-btn p-l-10">
+                  <button
+                    class="btn btn-primary f-s-12 rounded-corner"
+                    type="button"
+                  >
+                    Comment
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- end timeline-body -->
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,32 @@
+.img-container {
+  position: relative;
+}
+img {
+  position: absolute;
+  border-radius: 100%;
+  top: -80px;
+}
+.cust-nav {
+  background-color: #000;
+}
+.cust-nav ul a {
+  text-decoration: none;
+  color: #fff;
+}
+.cust-nav ul {
+  display: flex;
+  list-style-type: none;
+  color: #fff;
+  justify-content: space-between;
+  align-self: center;
+  padding: 15px 5px 10px 5px;
+  margin: 0;
+}
+.cust-primary-btn {
+  padding: 5px 20px;
+  background-color: #27aae1;
+  border: 0;
+  outline: none;
+  color: #fff;
+  border-radius: 7px;
+}

@@ -1,0 +1,23 @@
+<div class="">
+  <form
+    class="W-100 d-flex flex-sm-row flex-column justify-content-between align-items-md-center"
+    [formGroup]="postForm"
+    novalidate
+    (ngSubmit)="onSubmit()"
+  >
+    <app-usericoncircle></app-usericoncircle>
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+      placeholder="Write what you wish *"
+      formControlName="comment"
+    ></textarea>
+    <div class="d-flex justify-content-between w-25 p-2">
+      <i class="bi bi-images"></i>
+      <i class="bi bi-pencil-square"></i>
+      <i class="bi bi-map"></i>
+    </div>
+    <button class="btn btn-primary" type="submit">Publish</button>
+  </form>
+</div>

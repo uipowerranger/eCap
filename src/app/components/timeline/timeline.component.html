@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="d-flex flex-column bd-highlight mb-3 timeline-header-wrapper">
+    <!-- <app-timelineheader></app-timelineheader> -->
+    <div class="mt-auto p-2 bd-highlight w-100">
+      <app-timelineheader></app-timelineheader>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 text-center"><h1>Vani</h1></div>
+    <div class="col-8">
+      <app-postpublish (childEvent)="receveFromChild($event)"></app-postpublish>
+      <div class="timeline-post">
+        <app-timelinepost [posts]="posts"></app-timelinepost>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="col-padding" *ngFor="let friend of friends">
+        <app-timelinefollow [friend]="friend"></app-timelinefollow>
+      </div>
+    </div>
+  </div>
+</div>

@@ -47,6 +47,11 @@ import { FriendCard } from './components/friendcard/friendcard.component';
 import { LoggedprofileComponent } from './components/loggedprofile/loggedprofile.component';
 import { UsericoncircleComponent } from './components/usericoncircle/usericoncircle.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { PostpublishComponent } from './components/postpublish/postpublish.component';
+import { TimelineheaderComponent } from './components/timelineheader/timelineheader.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
+import { TimelinepostComponent } from './components/timelinepost/timelinepost.component';
+import { TimelinefollowComponent } from './components/timelinefollow/timelinefollow.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,6 +74,11 @@ import { MenuComponent } from './components/menu/menu.component';
     LoggedprofileComponent,
     UsericoncircleComponent,
     MenuComponent,
+    PostpublishComponent,
+    TimelineheaderComponent,
+    TimelineComponent,
+    TimelinepostComponent,
+    TimelinefollowComponent,
   ],
   imports: [
     BrowserModule,

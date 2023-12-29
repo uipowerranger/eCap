@@ -61,19 +61,14 @@
             >
 
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button ngbDropdownItem>Action - 1</button>
-              <button ngbDropdownItem>Another Action</button>
-              <button ngbDropdownItem>Something else is here</button>
+              <button ngbDropdownItem [routerLink]="['timeline']">
+                Timeline
+              </button>
             </div>
           </div>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            [routerLink]="'.'"
-            (click)="isMenuCollapsed = true"
-            >Login In</a
-          >
+          <a class="nav-link">Login In</a>
         </li>
 
         <li class="nav-item">
