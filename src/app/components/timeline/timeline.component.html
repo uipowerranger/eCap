@@ -6,7 +6,9 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-2 text-center"><h1>Vani</h1></div>
+    <div class="col-2 text-center">
+      <h1>{{ user.firstName }}</h1>
+    </div>
     <div class="col-8">
       <app-postpublish (childEvent)="receveFromChild($event)"></app-postpublish>
       <div class="timeline-post">

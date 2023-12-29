@@ -1,6 +1,6 @@
 <ul class="list-unstyled">
   <li *ngFor="let menu of menuItem" class="menu-item">
-    <a href=""
+    <a href="" [routerLink]="[menu.route]" (click)="displayContent(menu.route)"
       ><i class="bi {{ menu.icon }}"></i><strong>{{ menu.label }} </strong></a
     >
   </li>

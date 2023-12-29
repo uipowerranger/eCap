@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Post } from 'src/app/models/post';
+import { AccountService } from 'src/app/services';
 import { PostService } from 'src/app/services/pos.services';
 @Component({
   selector: 'app-timeline',
@@ -7,7 +8,13 @@ import { PostService } from 'src/app/services/pos.services';
   styleUrls: ['./timeline.component.scss'],
 })
 export class TimelineComponent {
-  constructor(private postsrv: PostService) {}
+  user: any;
+  constructor(
+    private postsrv: PostService,
+    private accountService: AccountService
+  ) {
+    this.accountService.user.subscribe((x) => (this.user = x));
+  }
 
   // constructor(private postsrv: PostService) {}
   posts!: Post[];

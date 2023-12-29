@@ -2,19 +2,14 @@
   <div class="brand-block">
     <app-brand></app-brand>
   </div>
-  <div class="div-header">Find My Friend</div>
-  <div class="form">
-    <span> Signup now and meet awesome people around the world </span>
-    <div class="inp">
-      <input type="text" name="" id="" placeholder="Enter Name" />
-    </div>
-    <div class="inp">
-      <input type="email" name="" id="" placeholder="Enter Email" />
-    </div>
-    <div class="inp">
-      <input type="passwod" name="" id="" placeholder="Enter passwod" />
-    </div>
-    <button>Signup</button>
-    <div><a href="javascript(0)"> Already have an account? </a></div>
+  <small (click)="loginorregister('login')">Login</small>&nbsp;<small
+    (click)="loginorregister('register')"
+    >Register</small
+  >
+  <div *ngIf="result === 'login'; else otherContent">
+    <app-login></app-login>
   </div>
+  <ng-template #otherContent>
+    <app-register (childEvent)="receveFromChild($event)"></app-register>
+  </ng-template>
 </div>

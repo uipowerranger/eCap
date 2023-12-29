@@ -1,68 +1,85 @@
-<div class="container-fluid">
-  <div class="d-flex justify-content-between">
-    <div class="flex-item-70">
-      <!-- <app-typewriter></app-typewriter> -->
-    </div>
-
-    <!-- <h4 class="card-header">Login</h4> -->
-    <div class="flex-item-10 login-wrapper">
-      <img
-        src="../../assets/images/Fnal-logo-white.png"
-        alt=""
-        srcset=""
-        class="tws-logo"
+<!-- <div class="login">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="inp">
+      <input
+        type="text"
+        formControlName="username"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f['username'].errors }"
       />
-      <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <div class="mb-3">
-          <input
-            type="text"
-            formControlName="username"
-            class="form-control"
-            placeholder="Username"
-          />
-          <div
-            *ngIf="submitted && f['username'].errors"
-            class="invalid-feedback"
-          >
-            <div *ngIf="f['username'].errors['required']">
-              Username is required
-            </div>
-          </div>
+      <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+        <div *ngIf="f['username'].errors['required']">Username is required</div>
+        <div *ngIf="f['username'].errors['minlength']">
+          Username must be at least 6 characters
         </div>
-        <div class="mb-3">
-          <input
-            type="password"
-            formControlName="password"
-            class="form-control"
-            placeholder="Password"
-          />
-          <div
-            *ngIf="submitted && f['password'].errors"
-            class="invalid-feedback"
-          >
-            <div *ngIf="f['password'].errors['required']">
-              Password is required
-            </div>
-          </div>
+        <div *ngIf="f['username'].errors['maxlength']">
+          Username must not exceed 20 characters
         </div>
-
-        <div class="mb-3">
-          <label class="checkbox-container">
-            <input type="checkbox" />&nbsp;Remember Me
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div align="center">
-          <button pRipple class="tws-primary">
-            <span
-              *ngIf="loading"
-              class="spinner-border spinner-border-sm me-1"
-            ></span>
-            <i class="pi pi-sign-in"></i>&nbsp; | Sign In
-          </button>
-          <a routerLink="../register" class="btn-link">Register</a>
-        </div>
-      </form>
+      </div>
     </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input
+        type="password"
+        formControlName="password"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+      />
+      <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+        <div *ngIf="f['password'].errors['required']">Password is required</div>
+        <div *ngIf="f['password'].errors['minlength']">
+          Password must be at least 6 characters
+        </div>
+        <div *ngIf="f['password'].errors['maxlength']">
+          Username must not exceed 40 characters
+        </div>
+      </div>
+    </div>
+    <button>Login</button>
+  </form>
+</div> -->
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="div-header">Find My Friend</div>
+  <div class="form">
+    <span> Login </span>
+    <div class="inp">
+      <input
+        type="text"
+        formControlName="username"
+        placeholder="Enter Username"
+        [ngClass]="{ 'is-invalid': submitted && f['username'].errors }"
+      />
+      <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+        <div *ngIf="f['username'].errors['required']">Username is required</div>
+        <!-- <div *ngIf="f['username'].errors['minlength']">
+          Username must be at least 6 characters
+        </div>
+        <div *ngIf="f['username'].errors['maxlength']">
+          Username must not exceed 20 characters
+        </div> -->
+      </div>
+    </div>
+    <div class="inp">
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Enter Password"
+        [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+      />
+      <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+        <div *ngIf="f['password'].errors['required']">Password is required</div>
+        <!-- <div *ngIf="f['username'].errors['minlength']">
+          Username must be at least 6 characters
+        </div>
+        <div *ngIf="f['username'].errors['maxlength']">
+          Username must not exceed 20 characters
+        </div> -->
+      </div>
+    </div>
+
+    <button>Signup</button>
+    <div><a href="javascript(0)"> Already have an account? </a></div>
   </div>
-</div>
+</form>

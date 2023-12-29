@@ -52,6 +52,13 @@ import { TimelineheaderComponent } from './components/timelineheader/timelinehea
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { TimelinepostComponent } from './components/timelinepost/timelinepost.component';
 import { TimelinefollowComponent } from './components/timelinefollow/timelinefollow.component';
+import { RegisterComponent } from './components/register/register.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { FriendsComponent } from './components/friends/friends.component';
+import { ImagesComponent } from './components/images/images.component';
+import { MynewsfeedComponent } from './components/mynewsfeed/mynewsfeed.component';
+import { ImageComponent } from './components/image/image.component';
+import { CardModule } from 'primeng/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,12 +86,19 @@ import { TimelinefollowComponent } from './components/timelinefollow/timelinefol
     TimelineComponent,
     TimelinepostComponent,
     TimelinefollowComponent,
+    RegisterComponent,
+    MessagesComponent,
+    FriendsComponent,
+    ImagesComponent,
+    MynewsfeedComponent,
+    ImageComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    CardModule,
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,

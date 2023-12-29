@@ -1,6 +1,6 @@
 .brand-block {
   padding: 60px;
-  padding-bottom: 120px;
+  // padding-bottom: 120px;
 }
 .div-header {
   font-family: "Pathway Gothic One", sans-serif;
@@ -195,34 +195,6 @@ hr.style-two {
     border-right: solid 345px transparent;
   }
 }
-
-// /* For iPhone 4 Portrait or Landscape View */
-// @media screen and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) {
-//   .login {
-//     width: 100%;
-//   }
-// }
-
-// /* For iPhone 5 Portrait or Landscape View */
-// @media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-//   .login {
-//     width: 100%;
-//     height: 400px;
-//     background-color: orange;
-//     color: black;
-//   }
-
-//   .login::after {
-//     height: 0;
-//     //   background-image: linear-gradient(to bottom, #294284, #255b9e, #1f75b6, #1e8fcc, #27aae1);
-//     border-top: solid 150px #294284;
-//     border-style: solid;
-//     //   border-image: linear-gradient(to bottom, #294284, #27aae1) 1;
-//     //   background: linear-gradient(87.36deg, blue 6.42%, red 84.24%);
-//     border-left: solid 163px transparent;
-//     border-right: solid 163px transparent;
-//   }
-// }
 
 /* For iPhone 6 and 6 plus Portrait or Landscape View */
 @media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {

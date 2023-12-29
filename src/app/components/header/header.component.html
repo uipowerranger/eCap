@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <app-brand></app-brand>
+    <p *ngIf="user">
+      <span class="text-white">{{ "Hi" + user["firstName"] }}</span>
+    </p>
     <button
       class="navbar-toggler"
       type="button"
@@ -25,19 +28,13 @@
       <ul class="navbar-nav cust-width">
         <li class="nav-item active">
           <!-- Step 4: Close the menu when a link is clicked. -->
-          <a
-            class="nav-link"
-            [routerLink]="'.'"
-            (click)="isMenuCollapsed = true"
-            >Home</a
-          >
+          <a class="nav-link" [routerLink]="'.'">Home</a>
         </li>
 
         <li class="nav-item">
           <div ngbDropdown class="d-inline-block">
             <a
               class="nav-link"
-              [routerLink]="'.'"
               (click)="isMenuCollapsed = true"
               ngbDropdownToggle
               ><span class="text-nowrap"> News Feed</span></a
@@ -54,7 +51,6 @@
           <div ngbDropdown class="d-inline-block">
             <a
               class="nav-link"
-              [routerLink]="'.'"
               (click)="isMenuCollapsed = true"
               ngbDropdownToggle
               >Timeline</a
@@ -78,6 +74,10 @@
             (click)="isMenuCollapsed = true"
             >Contact</a
           >
+        </li>
+
+        <li class="nav-item" *ngIf="user">
+          <a class="nav-link" (click)="logout()">Logout</a>
         </li>
       </ul>
     </div>

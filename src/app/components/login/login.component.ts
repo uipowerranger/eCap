@@ -6,7 +6,11 @@ import { first } from 'rxjs/operators';
 import { MessageService } from 'primeng/api';
 import { AccountService, AlertService } from 'src/app/services';
 
-@Component({ templateUrl: 'login.component.html' })
+@Component({
+  selector: 'app-login',
+  templateUrl: 'login.component.html',
+  styleUrls: ['./login.component.scss'],
+})
 export class LoginComponent implements OnInit {
   form!: FormGroup;
   loading = false;
@@ -54,7 +58,7 @@ export class LoginComponent implements OnInit {
       .subscribe({
         next: () => {
           const returnUrl =
-            this.route.snapshot.queryParams['returnUrl'] || '/dashboard';
+            this.route.snapshot.queryParams['returnUrl'] || '/check-my-friend';
           this.router.navigateByUrl(returnUrl);
           this.loading = false;
           this.alertService.success('Login Success ', undefined, false);
