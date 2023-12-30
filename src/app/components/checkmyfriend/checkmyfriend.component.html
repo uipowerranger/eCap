@@ -1,6 +1,6 @@
-<div class="container mt-5 cust-container">
+<div class="container-fluid mt-5 cust-container">
   <div class="row grid-divider">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <div class="col-padding">
         <app-loggedprofile
           [friend]="friends[0]"
@@ -11,7 +11,7 @@
         <app-menu (childEvent)="receveFromChild($event)"></app-menu>
       </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-7">
       <div class="col-padding">
         <div class="row mb-5">
           <div class="col-12">
@@ -30,8 +30,6 @@
           </div>
         </div>
         <div class="row" *ngIf="!display">
-          {{ display }}
-
           <div class="col-6" *ngFor="let friend of friends">
             <app-friendcard [friend]="friend"></app-friendcard>
           </div>

@@ -1,1 +1,5 @@
-<p>friends works!</p>
+<div class="row">
+  <div class="col-6" *ngFor="let friend of friends">
+    <app-friendcard [friend]="friend"></app-friendcard>
+  </div>
+</div>

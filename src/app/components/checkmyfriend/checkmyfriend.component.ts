@@ -27,4 +27,5 @@ export class CheckmyfriendComponent {
   receveFromChild($event: any) {
     this.display = $event;
   }
+  ngDestroy() {}
 }

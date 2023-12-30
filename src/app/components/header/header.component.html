@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
+  <div class="container">
     <app-brand></app-brand>
     <p *ngIf="user">
       <span class="text-white">{{ "Hi" + user["firstName"] }}</span>
@@ -33,10 +33,7 @@
 
         <li class="nav-item">
           <div ngbDropdown class="d-inline-block">
-            <a
-              class="nav-link"
-              (click)="isMenuCollapsed = true"
-              ngbDropdownToggle
+            <a class="nav-link" ngbDropdownToggle
               ><span class="text-nowrap"> News Feed</span></a
             >
 
