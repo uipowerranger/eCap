@@ -59,6 +59,7 @@ import { ImagesComponent } from './components/images/images.component';
 import { MynewsfeedComponent } from './components/mynewsfeed/mynewsfeed.component';
 import { ImageComponent } from './components/image/image.component';
 import { CardModule } from 'primeng/card';
+import { LikesdislikesComponent } from './components/likesdislikes/likesdislikes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -92,6 +93,7 @@ import { CardModule } from 'primeng/card';
     ImagesComponent,
     MynewsfeedComponent,
     ImageComponent,
+    LikesdislikesComponent,
   ],
   imports: [
     BrowserModule,

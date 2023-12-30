@@ -1,18 +1,16 @@
-<div class="d-flex justify-content-between">
-  <div class="card mb-2" style="width: 15rem">
-    <img
-      src="../../../assets/images/male-avatar.webp"
-      class="card-img-top"
-      alt="..."
-    />
-    <div class="card-body">
-      <!-- <h5 class="card-title">Card title</h5> -->
-      <p class="d-flex justify-content-around">
-        <i class="bi bi-hand-thumbs-up"></i>
-        <i class="bi bi-hand-thumbs-down"></i>
-      </p>
-      <app-followfriend></app-followfriend>
-      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+<div class="card-wrapper">
+  <div class="banner_holder">
+    <div class="banner_holderImage"></div>
+    <app-likesdislikes></app-likesdislikes>
+
+    <div class="user-posted d-flex flex-row">
+      <div class="user-image">
+        <img src="../../../assets/images/male-avatar.webp" class="img-fluid" />
+      </div>
+      <div class="d-flex flex-column">
+        <h6>Vinod</h6>
+        <small class="relation">Friend</small>
+      </div>
     </div>
   </div>
 </div>
